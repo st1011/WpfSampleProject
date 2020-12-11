@@ -1,0 +1,70 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:behavior="clr-namespace:MvvmLibrary.Behavior;assembly=MvvmLibrary"
+    xmlns:ViewModel="clr-namespace:WpfAppAnimation.ViewModel" xmlns:wpfappanimation="clr-namespace:WpfAppAnimation.View"
+    x:Class="WpfAppAnimation.View.MainView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <i:Interaction.Behaviors>
+        <behavior:ViewModelCleanupBehavior/>
+    </i:Interaction.Behaviors>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Hidden" >
+
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="CanvasFromTo"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:CanvasFromTo/>
+                </Border>
+
+                <TextBlock Text="CanvasFromBy"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:CanvasFromBy/>
+                </Border>
+
+                <TextBlock Text="AnimationRepeat"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationRepeat/>
+                </Border>
+
+                <TextBlock Text="AnimationColor"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationColor/>
+                </Border>
+
+
+                <TextBlock Text="AnimationKeyframe1"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationKeyframe1/>
+                </Border>
+
+                <TextBlock Text="AnimationKeyframe2"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationKeyframe2/>
+                </Border>
+
+                <TextBlock Text="AnimationEasingFunction"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationEasingFunction/>
+                </Border>
+
+                <TextBlock Text="AnimationKeyframe2"/>
+                <Border BorderBrush="Black" BorderThickness="1" Height="200">
+                    <wpfappanimation:AnimationKeyframe2/>
+                </Border>
+
+
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
